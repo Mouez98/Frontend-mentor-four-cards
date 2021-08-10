@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+/* Start heading text */
+section .heading-text {
+  text-align: center;
+  width: 500px;
+  margin: 0 auto 50px;
+}
+section .heading-text h2:first-of-type {
+  color: #777;
+  font-weight: normal;
+  font-size: 20px;
+}
+section .heading-text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+section .heading-text p {
+  color: #777;
+  font-size: 15px;
+}
+@media (max-width: 373px) {
+  section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  /* Start heading text */
+  section .heading-text {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+  section .heading-text h2:first-of-type {
+    font-size: 17px;
+  }
+  section .heading-text h2 {
+    font-size: 18px;
+  }
+  section .heading-text p {
+    font-size: 13px;
+  }
+}
+/* End heading text */
+
+section .grid .box {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 0px 20px 20px;
+  position: relative;
+  box-shadow: 0px 7px 10px 0px #777;
+}
+section .grid .box .svg {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 15px;
+}
+section .grid .team::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #ff5722;
+  top: -3px;
+  left: 0;
+}
+section .grid .Supervisor::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #00bcd4;
+  top: -3px;
+  left: 0;
+}
+section .grid .Calculator::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #2196f3;
+  top: -3px;
+  left: 0;
+}
+section .grid .karma::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #ffc107;
+  top: -3px;
+  left: 0;
+}
+
+section .grid .box .text-box h2 {
+}
+section .grid .box .text-box p {
+  color: #777;
+  flex-grow: 1;
+}
+@media (min-width: 374px) {
+  section .grid {
+    display: grid;
+    grid-template: repeat(2, 1fr )  / repeat(3, 350px);
+    gap: 30px;
+  }
+  section .grid .box {
+   margin: 0;
+  }
+  section .grid .Supervisor {
+   position: relative;
+    top: 120px;
+  }
+  section .grid .karma { 
+      grid-column:  2/2;
+      
+  }
+  section .grid .team {
+  }
+  section .grid .Calculator {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    position: relative;
+    top: 120px;
+  }
+}
+
+/*Test for text shadow */
+#text {
+  position: relative;
+  /*text-shadow: 10px 5px 4px #0f0;
+  color: #fff;*/
+  background-color: black;
+  color: white ;
+  width: 150px;
+  height: 50px;
+  border: 2px #ff5722 solid;
+  
+}
+
+#text::before {
+  content: "hello";
+    position: absolute;
+    color: #fff;
+    filter: blur(1px);
+    top: 3%;
+    left: 25%;
+}
