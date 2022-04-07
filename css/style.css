@@ -6,7 +6,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 .container {
-  width: 85%;
+  width: 100%;
   margin: 0 auto;
 }
 section {
@@ -114,6 +114,9 @@ section .grid .box .text-box p {
   flex-grow: 1;
 }
 @media (min-width: 374px) {
+  .container {
+    width: 85%;
+  }
   section .grid {
     display: grid;
     grid-template: repeat(2, 1fr )  / repeat(3, 350px);
@@ -130,8 +133,6 @@ section .grid .box .text-box p {
       grid-column:  2/2;
       
   }
-  section .grid .team {
-  }
   section .grid .Calculator {
     grid-column-start: 3;
     grid-row-start: 1;
@@ -140,24 +141,3 @@ section .grid .box .text-box p {
   }
 }
 
-/*Test for text shadow */
-#text {
-  position: relative;
-  /*text-shadow: 10px 5px 4px #0f0;
-  color: #fff;*/
-  background-color: black;
-  color: white ;
-  width: 150px;
-  height: 50px;
-  border: 2px #ff5722 solid;
-  
-}
-
-#text::before {
-  content: "hello";
-    position: absolute;
-    color: #fff;
-    filter: blur(1px);
-    top: 3%;
-    left: 25%;
-}
